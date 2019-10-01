@@ -4,6 +4,7 @@ import logo from './logo.png';
 import './App.css';
 import Toggle from './Toggle';
 import Nav from './Nav';
+import Checkout from './Checkout'
 
 const App = () => {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -24,10 +25,11 @@ const App = () => {
       <header className="App-header">
         <img src={logo} alt="Strabo" className="logo" />
         <button className="menu-button" onClick={() => setNavOpen(!isNavOpen)}>Menu</button>
-        <Nav style={navAnimation} />
+        {/* <Nav style={navAnimation} /> */}
       </header>
       <main>
         <Toggle />
+        <Checkout isOpen={isNavOpen} />
       </main>
     </animated.div>
   );
