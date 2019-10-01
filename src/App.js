@@ -5,6 +5,8 @@ import './App.css';
 import Toggle from './Toggle';
 import Nav from './Nav';
 import Checkout from './Checkout'
+import ModalWrapper from './Modal'
+
 
 const App = () => {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -28,7 +30,8 @@ const App = () => {
         {/* <Nav style={navAnimation} /> */}
       </header>
       <main>
-        <Toggle />
+        {/* <Toggle /> */}
+        <ModalWrapper />
         <Checkout isOpen={isNavOpen} />
       </main>
     </animated.div>
