@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated, config } from 'react-spring'
 
 const Checkout = ({ isOpen }) => {
     const { x } = useSpring({
-        x: isOpen ? 0 : 100
+        x: isOpen ? 0 : 100,
+        config: config.gentle
     });
 
 
