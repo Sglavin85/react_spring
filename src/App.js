@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import logo from './logo.png';
 import './App.css';
+import Routes from './Routes'
 import Toggle from './Toggle';
 import Nav from './Nav';
-import Checkout from './Checkout'
-import ModalWrapper from './Modal'
+import Accordion from './Accordion';
+import Checkout from './Checkout';
+import ModalWrapper from './Modal';
+import WayPoints from './Waypoints';
+import Gesture from './Gesture';
 
 
 const App = () => {
@@ -30,8 +34,12 @@ const App = () => {
         {/* <Nav style={navAnimation} /> */}
       </header>
       <main>
+        {/* <Routes /> */}
         {/* <Toggle /> */}
         <ModalWrapper />
+        <Accordion />
+        {/* <WayPoints /> */}
+        <Gesture />
         <Checkout isOpen={isNavOpen} />
       </main>
     </animated.div>
