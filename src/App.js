@@ -38,7 +38,7 @@ const App = () => {
         {/* <Toggle /> */}
         <ModalWrapper />
         <Accordion />
-        {/* <WayPoints /> */}
+        <WayPoints />
         <Gesture />
         <Checkout isOpen={isNavOpen} />
       </main>

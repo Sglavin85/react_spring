@@ -7,30 +7,19 @@ const Waypoints = () => {
     const [p3, p3toggle] = useState(false);
     const [p4, p4toggle] = useState(false);
     const [p5, p5toggle] = useState(false);
-
-
-    const p2animation = useSpring({
-        opacity: p2 ? 1 : 0,
-        transform: p2 ? 'translate3d(0,0,0)' : 'translate3d(0, -50% ,0)',
-        config: config.molasses
-    })
-
-    const p3animation = useSpring({
-        opacity: p3 ? 1 : 0,
-        transform: p3 ? 'translate3d(0,0,0)' : 'translate3d(0, -50% ,0)',
-        config: config.molasses
-    })
-
-    const p4animation = useSpring({
-        opacity: p4 ? 1 : 0,
-        transform: p4 ? 'translate3d(0,0,0)' : 'translate3d(0, -50% ,0)',
-        config: config.molasses
-    })
-    const p5animation = useSpring({
-        opacity: p5 ? 1 : 0,
-        transform: p5 ? 'translate3d(0,0,0)' : 'translate3d(0, -50% ,0)',
-        config: config.molasses
-    })
+    
+    const createAnimationValues = (pBool) => {
+        return {
+            opacity: pBool ? 1 : 0,
+            transform: pBool ? 'translate3d(0,0,0)' : 'translate3d(0, -50% ,0)',
+            config: config.molasses
+        }
+    }
+    
+    const p2animation = useSpring(createAnimationValues(p2))
+    const p3animation = useSpring(createAnimationValues(p3))
+    const p4animation = useSpring(createAnimationValues(p4))
+    const p5animation = useSpring(createAnimationValues(p5))
 
     return (
         <div className="waypoints">
